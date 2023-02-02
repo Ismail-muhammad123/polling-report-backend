@@ -4,7 +4,7 @@ from .api_views import *
 
 urlpatterns = [
     path('wards', WardList.as_view(), name='list_wards'),                           # GET
-    path('units', AllPollingUnitsList, name='list_all_units'),                      # GET
+    path('units', AllPollingUnitsList.as_view(), name='list_all_units'),                      # GET
     path('agent-wards', AgentPollingUnitsList.as_view(), name='get_agent_units'),   # GET
     path('agents', AgentList.as_view(), name='list_agents'),                        # GET
     path('reports', ReportsList.as_view(), name='list_reports'),                    # GET
